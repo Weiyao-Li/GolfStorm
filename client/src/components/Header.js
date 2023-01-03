@@ -1,8 +1,13 @@
 import React from 'react';
+import {useDispatch, useSelector} from "react-redux";
 import {Nav, Navbar, Container, Row} from "react-bootstrap";
 import {LinkContainer} from 'react-router-bootstrap';
 
 const Header = () => {
+
+    const userLogin = useSelector(state => state.userLogin)
+    const {useInfo} = userLogin
+    
     return (
         <header>
             <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
